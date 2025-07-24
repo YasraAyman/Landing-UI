@@ -1,0 +1,283 @@
+/* RESET & BASE STYLES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  line-height: 1.6;
+  background: #f8fafc;
+  color: #222;
+}
+
+/* HEADER & NAVIGATION */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: #4a90e2;
+  padding: 20px 5%;
+}
+header img {
+  border-radius: 50%;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+nav {
+  display: flex;
+  gap: 16px;
+}
+nav button {
+  background: #fff;
+  color: #4a90e2;
+  border: none;
+  font-size: 1rem;
+  padding: 10px 24px;
+  margin: 0 4px;
+  border-radius: 24px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  font-weight: 600;
+}
+nav button:hover,
+.hero button:hover {
+  background: #f39c12;
+  color: #fff;
+}
+
+/* HERO SECTION */
+.hero {
+  text-align: center;
+  padding: 56px 10% 56px 10%;
+  background: linear-gradient(rgba(74,144,226,0.7),rgba(74,144,226,0.7)), url('hero-bg.jpg') center/cover no-repeat;
+  color: #fff;
+}
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 18px;
+  letter-spacing: 1px;
+}
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+.hero button {
+  padding: 12px 28px;
+  background-color: #f39c12;
+  color: #fff;
+  border: none;
+  border-radius: 28px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+/* FEATURES SECTION */
+.features {
+  background: #f9fafb;
+  padding: 48px 5%;
+}
+.features h2 {
+  text-align: center;
+  margin-bottom: 32px;
+  font-size: 2rem;
+  font-weight: 700;
+}
+.features > div {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.features div[style*="text-align:center"] {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 10px rgba(74,144,226,0.06);
+  padding: 28px 14px 22px 14px;
+  margin: 16px 0;
+  flex: 1 1 180px;
+  min-width: 210px;
+  min-height: 270px;
+  transition: transform 0.18s;
+}
+.features div[style*="text-align:center"]:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 26px rgba(74,144,226,0.1);
+}
+.features img {
+  margin-bottom: 12px;
+}
+
+/* FEATURED TRIPS */
+.featured-trips {
+  padding: 48px 5%;
+}
+.featured-trips h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 36px;
+}
+.trip-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 2.5%;
+  justify-content: space-between;
+}
+.trip {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  overflow: hidden;
+  margin: 20px 0;
+  width: 31%;
+  min-width: 290px;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.22s, transform 0.15s;
+}
+.trip:hover {
+  box-shadow: 0 8px 30px rgba(74,144,226,0.11);
+  transform: translateY(-6px) scale(1.015);
+}
+.trip img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.trip h3 {
+  margin: 12px 0 8px 0;
+}
+.trip p {
+  margin: 0 0 14px 0;
+}
+.trip button {
+  background: #4a90e2;
+  color: #fff;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 7px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 4px;
+  align-self: flex-start;
+  transition: background 0.16s;
+}
+.trip button:hover {
+  background: #f39c12;
+}
+
+.trip > div {
+  padding: 16px 20px 18px 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* TESTIMONIALS */
+.testimonials {
+  background-color: #f4f4f4;
+  padding: 48px 5%;
+}
+.testimonials h2 {
+  margin-bottom: 32px;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #191919;
+}
+.testimonial-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+  gap: 18px;
+}
+.testimonial {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.05);
+  margin: 16px 0;
+  width: 30%;
+  min-width: 220px;
+  padding: 24px 18px;
+  font-size: 1.05rem;
+  color: #3b3b3b;
+}
+.testimonial p:last-child {
+  font-style: italic;
+  color: #4277b2;
+  margin-top: 12px;
+}
+
+/* FOOTER */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 22px 5%;
+  font-size: 1rem;
+}
+footer a {
+  color: #91d3ff;
+  text-decoration: underline;
+}
+
+/* RESPONSIVE BREAKPOINTS  */
+@media (max-width: 1000px) {
+  .trip-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .trip, .testimonial {
+    width: 80% !important;
+    min-width: unset;
+  }
+}
+@media (max-width: 800px) {
+  .features > div,
+  .testimonial-container {
+    flex-direction: column;
+    gap: 32px 0;
+  }
+  .features div[style*="text-align:center"] {
+    min-width: unset;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  nav {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 18px;
+  }
+}
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    padding: 18px 3%;
+    text-align: center;
+    gap: 10px;
+  }
+  .hero {
+    padding: 40px 5%;
+    font-size: 1rem;
+  }
+  .features,
+  .featured-trips,
+  .testimonials {
+    padding: 34px 3%;
+  }
+  .testimonial {
+    padding: 18px 10px;
+    font-size: 0.98rem;
+  }
+}
